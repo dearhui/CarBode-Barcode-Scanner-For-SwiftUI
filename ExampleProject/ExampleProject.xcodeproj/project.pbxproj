@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1CABAC222768C0E100308BA1 /* CarBode in Frameworks */ = {isa = PBXBuildFile; productRef = 1CABAC212768C0E100308BA1 /* CarBode */; };
 		3E43BC652410C85300B3384A /* ModalBarcodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E43BC642410C85300B3384A /* ModalBarcodeGenerator.swift */; };
 		3EC5EF7C23C447EA0063A687 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC5EF7B23C447EA0063A687 /* AppDelegate.swift */; };
 		3EC5EF7E23C447EA0063A687 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC5EF7D23C447EA0063A687 /* SceneDelegate.swift */; };
@@ -15,10 +16,10 @@
 		3EC5EF8523C447EE0063A687 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EC5EF8423C447EE0063A687 /* Preview Assets.xcassets */; };
 		3EC5EF8823C447EE0063A687 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EC5EF8623C447EE0063A687 /* LaunchScreen.storyboard */; };
 		3EC5EF9223C448A20063A687 /* ModalScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC5EF9123C448A20063A687 /* ModalScannerView.swift */; };
-		3ECBC9C2267C4E1E00C1089D /* CarBode in Frameworks */ = {isa = PBXBuildFile; productRef = 3ECBC9C1267C4E1E00C1089D /* CarBode */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1CABAC202768C0C100308BA1 /* CarBode */ = {isa = PBXFileReference; lastKnownFileType = folder; name = CarBode; path = ..; sourceTree = "<group>"; };
 		3E43BC642410C85300B3384A /* ModalBarcodeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalBarcodeGenerator.swift; sourceTree = "<group>"; };
 		3EC5EF7823C447EA0063A687 /* ExampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EC5EF7B23C447EA0063A687 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,16 +37,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3ECBC9C2267C4E1E00C1089D /* CarBode in Frameworks */,
+				1CABAC222768C0E100308BA1 /* CarBode in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1CABAC1F2768C0C100308BA1 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				1CABAC202768C0C100308BA1 /* CarBode */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		3EC5EF6F23C447EA0063A687 = {
 			isa = PBXGroup;
 			children = (
+				1CABAC1F2768C0C100308BA1 /* Packages */,
 				3EC5EF7A23C447EA0063A687 /* ExampleProject */,
 				3EC5EF7923C447EA0063A687 /* Products */,
 				4FE393DE2521C1FD007165D3 /* Frameworks */,
@@ -108,7 +118,7 @@
 			);
 			name = ExampleProject;
 			packageProductDependencies = (
-				3ECBC9C1267C4E1E00C1089D /* CarBode */,
+				1CABAC212768C0E100308BA1 /* CarBode */,
 			);
 			productName = ExampleProject;
 			productReference = 3EC5EF7823C447EA0063A687 /* ExampleProject.app */;
@@ -139,7 +149,6 @@
 			);
 			mainGroup = 3EC5EF6F23C447EA0063A687;
 			packageReferences = (
-				3ECBC9C0267C4E1E00C1089D /* XCRemoteSwiftPackageReference "CarBode-Barcode-Scanner-For-SwiftUI" */,
 			);
 			productRefGroup = 3EC5EF7923C447EA0063A687 /* Products */;
 			projectDirPath = "";
@@ -367,21 +376,9 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		3ECBC9C0267C4E1E00C1089D /* XCRemoteSwiftPackageReference "CarBode-Barcode-Scanner-For-SwiftUI" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/heart/CarBode-Barcode-Scanner-For-SwiftUI";
-			requirement = {
-				branch = develop;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		3ECBC9C1267C4E1E00C1089D /* CarBode */ = {
+		1CABAC212768C0E100308BA1 /* CarBode */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3ECBC9C0267C4E1E00C1089D /* XCRemoteSwiftPackageReference "CarBode-Barcode-Scanner-For-SwiftUI" */;
 			productName = CarBode;
 		};
 /* End XCSwiftPackageProductDependency section */
