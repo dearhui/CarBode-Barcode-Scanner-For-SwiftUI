@@ -54,6 +54,8 @@ struct ModalScannerView: View {
     @State var torchIsOn = false
     @State var showingAlert = false
     @State var cameraPosition = AVCaptureDevice.Position.back
+    
+    @State var isActiveCamera = true
 
     var body: some View {
         VStack {
@@ -82,10 +84,18 @@ struct ModalScannerView: View {
             }
             
             
-            Button(action: {
-                self.torchIsOn.toggle()
-            }) {
-                Text("Toggle Torch Light")
+            VStack {
+                Button(action: {
+                    self.torchIsOn.toggle()
+                }) {
+                    Text("Toggle Torch Light")
+                }
+                
+                Button(action: {
+                    self.isActiveCamera.toggle()
+                }) {
+                    Text("Toggle Camera Active")
+                }
             }
 
             Spacer()
@@ -95,6 +105,7 @@ struct ModalScannerView: View {
                 torchLightIsOn: $torchIsOn,
                 cameraPosition: $cameraPosition,
                 mockBarCode: .constant(BarcodeData(value:"My Test Data", type: .qr))
+                , isActive: $isActiveCamera
             ){
                 print("BarCodeType =",$0.type.rawValue, "Value =",$0.value)
                 barcodeValue = $0.value

@@ -33,7 +33,8 @@ public struct CBScanner: UIViewRepresentable {
     @Binding
     public var mockBarCode: BarcodeData
 
-    public let isActive: Bool
+    @Binding
+    public var isActive: Bool
     
     public var onFound: OnFound?
     public var onDraw: OnDraw?
@@ -43,7 +44,7 @@ public struct CBScanner: UIViewRepresentable {
          scanInterval: Binding<Double> = .constant(3.0),
          cameraPosition: Binding<AVCaptureDevice.Position> = .constant(.back),
          mockBarCode: Binding<BarcodeData> = .constant(BarcodeData(value: "barcode value", type: .qr)),
-         isActive: Bool = true,
+                isActive: Binding<Bool> = .constant(true),
          onFound: @escaping OnFound,
          onDraw: OnDraw? = nil
     ) {
@@ -52,7 +53,7 @@ public struct CBScanner: UIViewRepresentable {
         _scanInterval = scanInterval
         _cameraPosition = cameraPosition
         _mockBarCode = mockBarCode
-        self.isActive = isActive
+        _isActive = isActive
         self.onFound = onFound
         self.onDraw = onDraw
     }
