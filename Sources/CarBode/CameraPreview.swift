@@ -241,7 +241,7 @@ extension CameraPreview: AVCaptureMetadataOutputObjectsDelegate {
 
     public func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
 
-        if let metadataObject = metadataObjects.first {
+        for metadataObject in metadataObjects {
             guard let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject else { return }
 
             #if !targetEnvironment(simulator)
